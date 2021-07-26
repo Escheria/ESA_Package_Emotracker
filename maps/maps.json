@@ -1,0 +1,8 @@
+﻿[
+  {
+    "name": "overworld",
+    "img": "images/bck_map.png",
+	"location_size": 14,
+	"location_border_thickness": 2
+  }
+]

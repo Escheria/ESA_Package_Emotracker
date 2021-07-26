@@ -1,0 +1,15 @@
+﻿{
+  "name": "ESA Map Tracker with Logic",
+  "game_name": "Environmental Station Alpha Randomizer",
+  "package_version": "1.0.0.0",
+  "package_uid": "esalpha_maplogic",
+  "author": "Mokesmoe+TetraxZ+Escheria",
+  "variants": {
+    "standard": {
+      "display_name": "Standard Map Tracker"
+    },
+    "items_only": {
+      "display_name": "Item Tracker"
+    }
+  }
+}

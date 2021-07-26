@@ -1,0 +1,1044 @@
+﻿[
+	//caves
+	{
+		"name": "The Cave Complex",
+        "children": [
+			{
+				"name": "Double Jump",
+				"short_name": "jump",
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 224,
+						"y": 224
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Dash Booster V",
+				"short_name": "v dash",
+				"access_rules": [ "v_dash", "jump, [keycard]" ],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 192,
+						"y": 128
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Rough Map",
+				"short_name": "map",
+				"access_rules": [
+					//Jump or V-Dash accounts for Jump Booster before Beetle HP
+					//If going from Beetle HP, then need one of jump|vdash|hdash|bike|hook
+					"$hasJumpOrVDash, [hp:6]",
+					"$hasJumpOrVDash, [hp:4], propeller"
+					],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 320,
+						"y": 208
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Health Pack Beetle",
+				"short_name": "beetle hp",
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 256,
+						"y": 208
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Diskette Caves",
+				"short_name": "caves disk",
+				"access_rules": [ "{jump}", "[jump, hookshot]", "v_dash" ],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 304,
+						"y": 176
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Caves Secret Passage",
+				"short_name": "caves passage",
+				"access_rules": [ "[]", "h_dash", "v_dash", "jump", "bike", "hookshot" ],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 256,
+						"y": 160
+					}
+				],
+				"sections": [
+					{
+						"name": "CROWN",
+						"capture_item": true,
+						"item_count": 1,
+						"access_rules": [ "{}", "h_dash", "v_dash", "jump", "bike", "hookshot" ],
+					},
+					{
+						"name": "Key Caves",
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Pillar Caves Fall",
+				"short_name": "fall pillar",
+				"access_rules": [ "[]", "v_dash, jump", "v_dash, x_dash" ],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 240,
+						"y": 144
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Pillar Caves Green Blocks",
+				"short_name": "green pillar",
+				//Also needs access to a green block
+				"access_rules": [
+					"{v_dash, x_dash}", "v_dash, x_dash, hookshot",
+					"[jump, hookshot]",  "v_dash, hookshot"
+					],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 272,
+						"y": 128
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Pillar Caves Beetle",
+				"short_name": "beetle pillar",
+				"access_rules": [ "v_dash, x_dash" ],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 208,
+						"y": 208
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+		]
+	},
+	//depths
+	{
+		"name": "The Depths",
+        "children": [
+			{
+				"name": "Diskette Depths Maze",
+				"short_name": "maze disk",
+				"access_rules": [
+					//Can check but will be stuck in the area
+					"{hookshot, $hasCharge}", "{bike, $hasCharge}", "{h_dash, $hasCharge}",
+					"jump, $hasCharge", "v_dash, $hasCharge"
+				],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 288,
+						"y": 272
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Power",
+				"access_rules": [
+					//Can check but cannot exit area
+					"{jump, hookshot}", "{jump, h_dash}", "{v_dash, hookshot}", "{bike, v_dash}",
+					//With HS: enter Power room via left wind, pain in the ass to get through but possible
+					"jump, hookshot, power",
+					"jump, $hasHOrVDash, power",
+					"bike, v_dash, hookshot",
+				],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 192,
+						"y": 272
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+		
+		]
+	},
+	//volcanic
+	{
+		"name": "Volcanic Sector",
+        "children": [
+			{
+				"name": "Hookshot",
+				"short_name": "hook",
+				"access_rules": [ "{jump}", "{v_dash}", "jump, v_dash", "jump, hookshot", "v_dash, x_dash"],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 432,
+						"y": 176
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Supercharge",
+				"access_rules": [
+					"v_dash, x_dash, $hasCharge, armour",
+					"jump, v_dash, h_dash, $hasCharge, hookshot, armour",
+					"jump, v_dash, bike, $hasCharge, hookshot, armour"
+				],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 464,
+						"y": 256
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Dash Booster X",
+				"short_name": "x dash",
+				"access_rules": [
+					"{alldisks, v_dash, x_dash, keycard}",
+					"{alldisks, jump, v_dash, keycard}",
+					"{alldisks, jump, hookshot, keycard}",
+					"v_dash, x_dash, hookshot",
+					"v_dash, x_dash, h_dash"
+				],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 368,
+						"y": 208
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Health Pack Fire Spikes",
+				"short_name": "firespike hp",
+				"access_rules": [
+					"v_dash, x_dash",
+					"v_dash, hookshot",
+					"jump, hookshot",
+					"v_dash, jump, bike" ],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 432,
+						"y": 240
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Health Pack Fire Entrance",
+				"short_name": "firestart hp",
+				"access_rules": [ "v_dash", "jump, hookshot" ],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 432,
+						"y": 208
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Diskette Fire Lava Swim",
+				"short_name": "lavaswim disk",
+				"access_rules": [ 
+					"v_dash, $hasCharge, armour",
+					"v_dash, $hasCharge, [hp:6, propeller]",
+					"v_dash, $hasCharge, [hp:6, propeller]",
+					"jump, $hasCharge, armour",
+					"jump, $hasCharge, [hp:6]"
+				],
+				"map_locations": [
+					{ 
+						"map": "overworld",
+						"x": 416,
+						"y": 256
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Diskette Fire Top",
+				"short_name": "firetop disk",
+				"access_rules": [
+					"v_dash, x_dash, armour, bike",	     "v_dash, x_dash, bike, [hp:2]",
+					"v_dash, x_dash, armour, propeller", "v_dash, x_dash, propeller, [hp:4]",
+					"v_dash, x_dash, armour, h_dash",
+					"[jump, hookshot, armour]",
+				],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 384,
+						"y": 160
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Key Fire Dash",
+				"short_name": "dash key",
+				"access_rules": [ 
+					"v_dash, jump,   h_dash, $hasCharge",
+					"v_dash, x_dash, h_dash, $hasCharge",
+					"jump, hookshot, h_dash, $hasCharge"
+				],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 320,
+						"y": 224
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+		
+		]
+	},
+	//sandrock
+	{
+		"name": "Sandrock Sector",
+        "children": [
+			{
+				"name": "Health Pack Sand Fall",
+				"short_name": "sandfall hp",
+				"access_rules": [ 
+					"v_dash, x_dash",
+					"jump, v_dash, bike",
+					"$hasJumpOrVDash, hookshot" ],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 192,
+						"y": 224
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Health Pack Sand Swim",
+				"short_name": "sandswim hp",
+				"access_rules": [ "v_dash, x_dash", "v_dash, jump, hookshot, $hasCharge" ],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 144,
+						"y": 272
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Diskette Sand Teleport",
+				"short_name": "sandtp disk",
+        "access_rules": [ "teleport" ],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 176,
+						"y": 240
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Diskette Sand Bottom",
+				"short_name": "sandbot disk",
+				"access_rules": [
+					"jump, hookshot",
+					"v_dash, hookshot",
+					"v_dash, x_dash",
+					"v_dash, jump, bike"
+				],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 128,
+						"y": 304
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+		
+		]
+	},
+	//underwater
+	{
+		"name": "Underwater Sector",
+        "children": [
+			{
+				"name": "Propeller",
+				"access_rules": [ "v_dash, hookshot", "jump, hookshot, propeller" ],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 32,
+						"y": 336
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Charge Shot",
+				"short_name": "charge",
+				"access_rules": [
+					//With these items you just beat the boss to exit the area on the right
+					//Also with this we are able to escape the water area via the main entrance
+					"hookshot, jump, propeller",
+					"hookshot, jump, v_dash",
+					"v_dash, x_dash"
+				],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 16,
+						"y": 144
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Plasma Shield",
+				"short_name": "plasma",
+				//Accessible using vdash only when going from Start to left side via sands
+				"access_rules": [ "v_dash", "jump, hookshot, teleport, h_dash"],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 64,
+						"y": 256
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Health Pack Water",
+				"short_name": "water hp",
+				"access_rules": [ "v_dash, x_dash", "$hasJumpOrVDash, hookshot" ],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 48,
+						"y": 224
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Diskette Water", 
+				"short_name": "water disk",
+				"access_rules": [
+					//Check via left side water
+					"{v_dash, jump}",
+					"{jump, hookshot, propeller}",
+					//Access via tube on the right
+					"v_dash, $hasCharge"
+				],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 80,
+						"y": 224
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+		
+		]
+	},
+	//jungle
+	{
+		"name": "Jungle Sector",
+        "children": [
+			{
+				"name": "Dash Booster H",
+				"short_name": "h dash",
+				"access_rules": [
+					//Cannot exit without H-dash but you can check it if you have area access
+					"{$canEnterJungle}",
+					"$canEnterJungle, h_dash",
+					],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 96,
+						"y": 64
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Triple Shot",
+				"short_name": "triple",
+				//Hookshot way is somewhat tricky but absolutely doable without glitches
+				"access_rules": [ "$canEnterJungle, x_dash", "$canEnterJungle, hookshot" ],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 256,
+						"y": 80
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Diskette Mender",
+				"short_name": "mender disk",
+				"access_rules": [
+					//Can check the item without power
+					"{$hasCharge, keycard, v_dash, x_dash}",
+					"{$hasCharge, keycard, hookshot, $hasJumpOrVDash}",
+					"{$hasCharge, keycard, jump, v_dash, bike}",
+					"$canDefeatMender, $hasCharge, keycard, v_dash, x_dash",
+					"$canDefeatMender, $hasCharge, keycard, hookshot, $hasJumpOrVDash",
+					"$canDefeatMender, $hasCharge, keycard, jump, v_dash, bike"
+				],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 288,
+						"y": 16
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+		
+		]
+	},
+	//temple
+	{
+		"name": "The Temple",
+        "children": [
+			{
+				"name": "Heat Resistant Suit",
+				"short_name": "heat suit",
+				"access_rules": [ 
+					//Top Way using Orbs
+					"$canEnterTemple, $hasHOrVDash, x_dash",
+					"$canEnterTemple, $hasHOrVDash, hookshot",
+					//Bottom way via volcanic
+					//Out of logic without heat resistant suit, but possible with enough health.
+					"$hasCharge, v_dash, x_dash, [armour]"
+				],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 416,
+						"y": 144
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Health Pack Temple",
+				"short_name": "temple hp",
+				"access_rules": [
+					//Accessed from outside of the Temple, mid-right exit from Elevator
+					"$hasCharge, v_dash", "$hasCharge, jump, hookshot"
+				],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 384,
+						"y": 80
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Diskette Temple Swim",
+				"short_name": "temple disk 1",
+				"access_rules": [
+					//Accessible via Temple
+					"$canEnterTemple, propeller",
+					//Check via bottom left Temple
+					"{v_dash, $hasCharge}", "{jump, $hasCharge}"
+				],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 384,
+						"y": 128
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Diskette Temple High",
+				"short_name": "temple disk 2",
+				"access_rules": [ 
+					"{$canEnterTemple}",
+					"$canEnterTemple, hookshot",
+					"$canEnterTemple, v_dash, x_dash"
+				],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 480,
+						"y": 64
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Key Temple",
+				"access_rules": [ 
+					"{v_dash, h_dash}",
+					"{jump, h_dash}",
+					"$canEnterTemple, v_dash, x_dash",
+					"$canEnterTemple, jump, hookshot",
+					"$canEnterTemple, jump, v_dash",
+				],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 352,
+						"y": 32
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+		
+		]
+	},
+	//derelict
+	{
+		"name": "Derelict Ship",
+        "children": [
+			{
+				"name": "Gold Keycard",
+				"short_name": "goldcard",
+				"access_rules": [ "{v_dash, x_dash}", "v_dash, h_dash", "jump, h_dash" ],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 480,
+						"y": 320
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "The Bike",
+				"short_name": "bike",
+				"access_rules": [
+					"{v_dash, x_dash}", "{v_dash, h_dash}", "{jump, h_dash}",
+					//Must beat virus first, so collect the items needed for that first
+					"virus"
+					],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 512,
+						"y": 320
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Health Pack Derelict",
+				"short_name": "ship hp",
+				"access_rules": [ "{v_dash, x_dash}", "v_dash, h_dash", "jump, h_dash" ],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 512,
+						"y": 400
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Diskette Derelict",
+				"short_name": "ship disk",
+				"access_rules": [ "{v_dash, x_dash}", "v_dash, h_dash, x_dash, keycard", "jump, h_dash, keycard" ],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 416,
+						"y": 320
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+		
+		]
+	},
+	//hub
+	{
+		"name": "Control Hub",
+        "children": [
+			{
+				"name": "Alpha Room",
+				"short_name": "alpha",
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 192,
+						"y": 320
+					}
+				],
+				"sections": [
+					{
+						"name": "Teleport Card",
+						"short_name": "tp card",
+						"capture_item": true,
+						"item_count": 1,
+						"access_rules": [ "v_dash", "jump, hookshot" ]
+					},
+					{
+						"name": "Gate Alpha",
+						"short_name": "alpha",
+						"capture_item": true,
+						"item_count": 1,
+						"access_rules": [
+						 "v_dash, $hasCharge",
+						 "jump, hookshot, $hasCharge" ],
+					}
+				]
+			},
+			{
+				"name": "Diskette Control Hub",
+				"short_name": "hub disk",
+				"access_rules": [ "v_dash", "[jump, hookshot]" ],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 320,
+						"y": 304
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Mwyah Key",
+				"short_name": "mwyah disk",
+				"access_rules": [
+					"{v_dash}",
+					"{jump, hookshot}",
+					"pillar1, pillar2, pillar3, pillar4, keycard, jump, hookshot, v_dash, h_dash, [x_dash]"
+				],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 336,
+						"y": 304
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Gate Beta",
+				"access_rules": [ "v_dash", "jump, hookshot" ],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 320,
+						"y": 320
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Gate Gamma",
+				"access_rules": [ "v_dash, x_dash", "v_dash, jump" ],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 192,
+						"y": 336
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+			{
+				"name": "Gate Delta",
+				"access_rules": [
+					"$hasJumpOrVDash, $hasCharge",
+					"{$hasJumpOrVDash, bike}",
+					"[$hasJumpOrVDash, bike, $hasCharge]" ],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 320,
+						"y": 336
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+		
+		]
+	},
+	//elevator
+	{
+		"name": "A.I. Mainframe",
+        "children": [
+			{
+				"name": "Pillar Elevator",
+				"access_rules": [ "v_dash", "jump" ],
+				"map_locations": [
+					{
+						"map": "overworld",
+						"x": 336,
+						"y": 176
+					}
+				],
+				"sections": [
+					{
+						"capture_item": true,
+						"item_count": 1
+					}
+				]
+			},
+		
+		]
+	}
+]

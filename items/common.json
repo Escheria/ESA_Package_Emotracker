@@ -1,0 +1,205 @@
+[
+  {
+    "name": "Charge Shot",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/charge_shot.png",
+    "codes": "charge"
+  },
+  {
+    "name": "Triple Shot",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/triple.png",
+    "codes": "triple"
+  },
+  {
+    "name": "Supercharge Module",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/supercharge.png",
+    "codes": "supercharge"
+  },
+  {
+    "name": "Plasma Field",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/plasma.png",
+    "codes": "plasma"
+  },
+  {
+    "name": "Hookshot",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/hookshot.png",
+    "codes": "hookshot"
+  },
+  {
+    "name": "Heat Armour",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/heat_armour.png",
+    "codes": "armour"
+  },
+  {
+    "name": "Bike",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/bike.png",
+    "codes": "bike"
+  },
+  {
+    "name": "Horizontal Dash",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/h_dash.png",
+    "codes": "h_dash"
+  },
+  {
+    "name": "Rough Map",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/map.png",
+    "codes": "map"
+  },
+  {
+    "name": "Jump Booster",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/jump_booster.png",
+    "codes": "jump"
+  },
+  {
+    "name": "Gold Keycard",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/keycard.png",
+    "codes": "keycard"
+  },
+  {
+    "name": "Propeller",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/propeller.png",
+    "codes": "propeller"
+  },
+  {
+    "name": "Teleport Access",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/tp_access.png",
+    "codes": "teleport"
+  },
+  {
+    "name": "Vertical Dash",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/v_dash.png",
+    "codes": "v_dash"
+  },
+  {
+    "name": "Dash Booster X",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/x_dash.png",
+    "codes": "x_dash"
+  },
+  {
+    "name": "Delta Gate",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/delta.png",
+    "codes": "delta"
+  },
+  {
+    "name": "Gamma Gate",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/gamma.png",
+    "codes": "gamma"
+  },
+  {
+    "name": "Alpha Gate",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/alpha.png",
+    "codes": "alpha"
+  },
+  {
+    "name": "Beta Gate",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/beta.png",
+    "codes": "beta"
+  },
+  {
+    "name": "Power",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/power.png",
+    "codes": "power"
+  },
+  {
+    "name": "Pillar 1",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/pillar1.png",
+    "codes": "pillar1"
+  },
+  {
+    "name": "Pillar 2",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/pillar2.png",
+    "codes": "pillar2"
+  },
+  {
+    "name": "Pillar 3",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/pillar3.png",
+    "codes": "pillar3"
+  },
+  {
+    "name": "Pillar 4",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/pillar4.png",
+    "codes": "pillar4"
+  },
+  {
+    "name": "HP Tanks",
+    "type": "consumable",
+    "img": "images/hp.png",
+    "max_quantity": 8,
+    "codes": "hp,alltanks"
+  },
+  {
+    "name": "Diskettes",
+    "type": "consumable",
+    "img": "images/disk.png",
+    "max_quantity": 12,
+    "codes": "disk,alldisks"
+  },
+  {
+    "name": "Monitor",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/monitor.png",
+    "codes": "monitor"
+  },
+  {
+    "name": "Virus",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/virus.png",
+    "codes": "virus"
+  },
+  {
+    "name": "Key",
+    "type": "consumable",
+    "img": "images/key.png",
+    "max_quantity": 4,
+    "codes": "key,allkeys"
+  },
+]
