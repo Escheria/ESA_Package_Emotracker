@@ -215,7 +215,8 @@
 					//With HS: enter Power room via left wind, pain in the ass to get through but possible
 					"jump, hookshot, power",
 					"jump, $hasHOrVDash, power",
-					"bike, v_dash, hookshot",
+					"bike, v_dash, hookshot"
+					"bike, v_dash, x_dash",
 				],
 				"map_locations": [
 					{
@@ -305,10 +306,9 @@
 				"name": "Health Pack Fire Spikes",
 				"short_name": "firespike hp",
 				"access_rules": [
-					"v_dash, x_dash",
-					"v_dash, hookshot",
 					"jump, hookshot",
-					"v_dash, jump, bike" ],
+					"v_dash"
+					],
 				"map_locations": [
 					{
 						"map": "overworld",
@@ -441,7 +441,12 @@
 			{
 				"name": "Health Pack Sand Swim",
 				"short_name": "sandswim hp",
-				"access_rules": [ "v_dash, x_dash", "v_dash, jump, hookshot, $hasCharge" ],
+				"access_rules": [ 
+					"v_dash, x_dash",
+					"v_dash, jump, hookshot, $hasCharge",
+					"{v_dash}",
+					"{jump, hookshot, $hasCharge}" //Out of logic check with Hookjumps
+				],
 				"map_locations": [
 					{
 						"map": "overworld",
@@ -478,7 +483,6 @@
 				"name": "Diskette Sand Bottom",
 				"short_name": "sandbot disk",
 				"access_rules": [
-					"jump, hookshot",
 					"v_dash, hookshot",
 					"v_dash, x_dash",
 					"v_dash, jump, bike"
@@ -997,9 +1001,13 @@
 			{
 				"name": "Gate Delta",
 				"access_rules": [
-					"$hasJumpOrVDash, $hasCharge",
-					"{$hasJumpOrVDash, bike}",
-					"[$hasJumpOrVDash, bike, $hasCharge]" ],
+					"v_dash, $hasCharge, hookshot",
+					"v_dash, $hasCharge, h_dash",
+					"{v_dash, bike}",
+					"{jump, hookshot, bike}",
+					"[v_dash, bike, $hasCharge]",
+					"[jump, hookshot, bike, $hasCharge]"
+				],
 				"map_locations": [
 					{
 						"map": "overworld",
