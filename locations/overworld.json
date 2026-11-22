@@ -1,5 +1,4 @@
 ﻿[
-	//caves
 	{
 		"name": "The Cave Complex",
         "children": [
@@ -15,6 +14,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -33,6 +33,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -56,6 +57,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -73,6 +75,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -91,6 +94,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -112,7 +116,7 @@
 						"name": "CROWN",
 						"capture_item": true,
 						"item_count": 1,
-						"access_rules": [ "{}", "h_dash", "v_dash", "jump", "bike", "hookshot" ],
+						"access_rules": [ "{}", "h_dash", "v_dash", "jump", "bike", "hookshot" ]
 					},
 					{
 						"name": "Key Caves",
@@ -134,6 +138,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -156,6 +161,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -174,14 +180,14 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
 				]
-			},
+			}
 		]
 	},
-	//depths
 	{
 		"name": "The Depths",
         "children": [
@@ -202,6 +208,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -215,8 +222,8 @@
 					//With HS: enter Power room via left wind, pain in the ass to get through but possible
 					"jump, hookshot, power",
 					"jump, $hasHOrVDash, power",
-					"bike, v_dash, hookshot"
-					"bike, v_dash, x_dash",
+					"bike, v_dash, hookshot",
+					"bike, v_dash, x_dash"
 				],
 				"map_locations": [
 					{
@@ -227,15 +234,14 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
 				]
-			},
-		
+			}
 		]
 	},
-	//volcanic
 	{
 		"name": "Volcanic Sector",
         "children": [
@@ -252,6 +258,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -273,6 +280,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -297,6 +305,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -318,6 +327,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -336,6 +346,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -360,6 +371,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -372,7 +384,7 @@
 					"v_dash, x_dash, armour, bike",	     "v_dash, x_dash, bike, [hp:2]",
 					"v_dash, x_dash, armour, propeller", "v_dash, x_dash, propeller, [hp:4]",
 					"v_dash, x_dash, armour, h_dash",
-					"[jump, hookshot, armour]",
+					"[jump, hookshot, armour]"
 				],
 				"map_locations": [
 					{
@@ -383,6 +395,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -405,15 +418,14 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
 				]
-			},
-		
+			}
 		]
 	},
-	//sandrock
 	{
 		"name": "Sandrock Sector",
         "children": [
@@ -433,6 +445,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -456,6 +469,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -474,6 +488,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -496,15 +511,14 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
 				]
-			},
-		
+			}
 		]
 	},
-	//underwater
 	{
 		"name": "Underwater Sector",
         "children": [
@@ -520,6 +534,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -544,6 +559,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -563,6 +579,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -581,6 +598,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -605,15 +623,14 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
 				]
-			},
-		
+			}
 		]
 	},
-	//jungle
 	{
 		"name": "Jungle Sector",
         "children": [
@@ -623,7 +640,7 @@
 				"access_rules": [
 					//Cannot exit without H-dash but you can check it if you have area access
 					"{$canEnterJungle}",
-					"$canEnterJungle, h_dash",
+					"$canEnterJungle, h_dash"
 					],
 				"map_locations": [
 					{
@@ -634,6 +651,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -653,6 +671,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -679,15 +698,14 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
 				]
-			},
-		
+			}
 		]
 	},
-	//temple
 	{
 		"name": "The Temple",
         "children": [
@@ -711,6 +729,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -732,6 +751,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -755,6 +775,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -777,6 +798,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -789,7 +811,7 @@
 					"{jump, h_dash}",
 					"$canEnterTemple, v_dash, x_dash",
 					"$canEnterTemple, jump, hookshot",
-					"$canEnterTemple, jump, v_dash",
+					"$canEnterTemple, jump, v_dash"
 				],
 				"map_locations": [
 					{
@@ -800,15 +822,15 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
 				]
-			},
+			}
 		
 		]
 	},
-	//derelict
 	{
 		"name": "Derelict Ship",
         "children": [
@@ -825,6 +847,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -847,6 +870,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -865,6 +889,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -883,15 +908,15 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
 				]
-			},
+			}
 		
 		]
 	},
-	//hub
 	{
 		"name": "Control Hub",
         "children": [
@@ -920,7 +945,7 @@
 						"item_count": 1,
 						"access_rules": [
 						 "v_dash, $hasCharge",
-						 "jump, hookshot, $hasCharge" ],
+						 "jump, hookshot, $hasCharge" ]
 					}
 				]
 			},
@@ -937,6 +962,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -959,6 +985,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -976,6 +1003,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -993,6 +1021,7 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
@@ -1017,15 +1046,14 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
 				]
-			},
-		
+			}
 		]
 	},
-	//elevator
 	{
 		"name": "A.I. Mainframe",
         "children": [
@@ -1041,12 +1069,12 @@
 				],
 				"sections": [
 					{
+						"name": "",
 						"capture_item": true,
 						"item_count": 1
 					}
 				]
-			},
-		
+			}		
 		]
 	}
 ]
